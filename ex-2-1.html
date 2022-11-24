@@ -10,26 +10,13 @@
 
 <body>
     <script>
-        function numbers() {
+        let age = prompt("What's your age?");
 
-            let min = prompt("Set a minimum value:");
-            let max = prompt("Set a maximum value:");
-
-
-            if (min > max) {
-                console.log("Hmmm you should take some time to reread what has been asked...");
-                return;
-                let current = prompt("Set whatever value:");
-
-            } else if((current < max) && (current > min)) {
-                console.log(current + 'is between ' + min + ' & ' + max);
-            } else {
-                return;
-            }
-
+        if (age >= 18) {
+            console.log("You're an adult!");
+        } else {
+            console.log("You're a child...");
         }
-
-        console.log(numbers());
 
     </script>
 </body>
