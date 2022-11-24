@@ -1,0 +1,29 @@
+<!DOCTYPE html> ,
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test js</title>
+  </head>
+
+  <body>
+    <script>
+      /**
+       * Calculate the surface of a square/rectangle
+       * @param {Number} a      The length of your rectangle
+       * @param {Number} b      The width of your rectangle
+       * @return {Number}       The calculated surface
+       */
+
+      function calcSurface (a, b) {
+        return a * b;
+      }
+
+      let length = Number(prompt("What's the length of your rectangle?"));
+      let width = Number(prompt("What's the width of your rectangle?"));
+
+      console.log("Your rectangle's surface is " + calcSurface(length, width));
+    </script>
+  </body>
+</html>
