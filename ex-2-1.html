@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test js</title>
+</head>
+
+<body>
+    <script>
+        function numbers(min, max, current) {
+
+            let min = prompt("Set a minimum value:");
+            let max = prompt("Set a maximum value:");
+            let current = prompt("Set whatever value:");
+
+            if (min > max) {
+                console.log("Hmmm you should take some time to reread what has been asked...");
+                return;
+
+            } elseif((current < max) && (current > min)) {
+                console.log(current + 'is between ' + min + ' & ' + max);
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
