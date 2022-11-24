@@ -1,0 +1,36 @@
+<!DOCTYPE html> ,
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test js</title>
+</head>
+
+<body>
+    <script>
+        let arr1 = [1, 2, 3, 4, 5];
+        let arr2 = [100, 101, 102];
+        let sum1 = 0;
+        sum2 = 0;
+        avg1 = 0;
+        avg2 = 0;
+
+        for (let numbers of arr1) {
+            sum1 = sum1 + numbers;
+            avg1 = sum1 / arr1.length;
+        }
+
+        for (let numbers of arr2) {
+            sum2 = sum2 + numbers;
+            avg2 = sum2 / arr2.length;
+        }
+
+        console.log("The average of the first array is equal to " + avg1);
+        console.log("The average of the second array is equal to " + avg2);
+    </script>
+
+</body>
+
+</html>
