@@ -10,22 +10,26 @@
 
 <body>
     <script>
-        function numbers(min, max, current) {
+        function numbers() {
 
             let min = prompt("Set a minimum value:");
             let max = prompt("Set a maximum value:");
-            let current = prompt("Set whatever value:");
+
 
             if (min > max) {
                 console.log("Hmmm you should take some time to reread what has been asked...");
                 return;
+                let current = prompt("Set whatever value:");
 
-            } elseif((current < max) && (current > min)) {
+            } else if((current < max) && (current > min)) {
                 console.log(current + 'is between ' + min + ' & ' + max);
+            } else {
+                return;
             }
+
         }
 
-
+        console.log(numbers());
 
     </script>
 </body>
