@@ -1,0 +1,59 @@
+<!DOCTYPE html> ,
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test js</title>
+  </head>
+
+  <body>
+    <script>
+      let learners = [...new Set([
+        "Arno Volts",
+        "Aurélien Mariaule",
+        "Aurore Lemaire",
+        "Benjamin Porsont",
+        "Céline Verreydt",
+        "Corentin Miserque",
+        "Dominique Coppée",
+        "Edouard de Romrée de Vichenet",
+        "Hugo Goorickx",
+        "Jofrey Houyoux",
+        "Jonathan Manes",
+        "Jonathan Bajoux",
+        "Laura Wilhelmi",
+        "Lysie Soyez",
+        "Marnie Benalia",
+        "Mathilde Cornelis",
+        "Milo Bonnet",
+        "Nadim El Nakadi",
+        "Nathalie Vanden Abeele",
+        "Nathalie Goffette",
+        "Nour Everaert",
+        "Pierre Mauriello",
+        "Quentin Bource ",
+        "Virginie Dourson",
+      ])];
+
+      n = randN();
+      randLearner = [];
+
+      function randN() {
+        min = 1;
+        max = learners.length;
+        return Math.floor(Math.random() * learners.length);
+      }
+
+      function pickLearner(inputAr, n) {
+        randN();
+        for (i = 1; i < n; i++) {
+          randLearner.push(learners[i]);
+        }
+        console.log(randLearner);
+      }
+
+      pickLearner(learners, n);
+    </script>
+  </body>
+</html>
