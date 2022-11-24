@@ -11,15 +11,17 @@
 <body>
     <script>
 
+        let newNumber = 0;
+        let sum = 0;
         let n = prompt("Choose a number:");
-        newNumber = 0;
-        newN = 0;
-        for (let i = 0; i < n; i++) {
-            let newN = i;
 
+        for (i = 1; i <= n; i++) {
+            newNumber = prompt("Another one:");
+            sum = Number(sum) + Number(newNumber);
         }
 
-        console.log(newN);
+        console.log(sum);
+
     </script>
 </body>
 
