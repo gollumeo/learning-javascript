@@ -9,14 +9,17 @@
 
   <body>
     <script>
-      function factorialize(a) {
-        // If the number is less than 0, reject it
+      /**
+       * Factorial of a number
+       * @param {Number}        The number of which we want the factorialization
+       * @return {Number}       The factorialization
+       */
+
+      function factorial(a) {
         if (a < 0) return -1;
-        // If the number is 0, its factorial is 1
         else if (a == 0) return 1;
-        // Otherwise, call the recursive procedure again
         else {
-          return a * factorialize(a - 1);
+          return a * factorial(a - 1);
         }
       }
       factorialize(5);
