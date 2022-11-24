@@ -15,19 +15,13 @@
        * @return {Number}       The randomly generated integer
        */
 
-      function calcDistance(a1, b1, a2, b2) {
-        let a = b2 - b1;
-        let b = a2 - a1;
+       function rand10() {
+        min = 1;
+        max = 10;
+        return Math.floor(Math.random() * (max - min + 1) + min);
+       }
 
-        return Math.sqrt(a * a + b * b).toFixed(2);
-      }
-
-      let a1 = prompt("What're the X coordinates of A?");
-      let a2 = prompt("What're the Y coordinates of A?");
-      let b1 = prompt("What're the X coordinates of B?");
-      let b2 = prompt("What're the Y coordinates of B?");
-
-      console.log(calcDistance(a1, b1, a2, b2));
+       console.log(rand10());
     </script>
   </body>
 </html>
