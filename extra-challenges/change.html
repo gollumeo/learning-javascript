@@ -15,8 +15,7 @@
         * @param {Number} moneyHanded    The money handed to pay
         * @return {Array} result         The change in a form of an array "result"
         */
-
-
+       
         function computeChange(price, moneyHanded) {
             //vérification du type des variables "price" & "moneyHanded".
             // Si !number, on retourne un array vide.
@@ -44,8 +43,8 @@
             return result;
         }
 
-        console.log(computeChange(12.3, 50));
-        console.log(computeChange(17.41, 20)); // rend 1ct en moins
+        console.table(computeChange(12.3, 50));
+        console.table(computeChange(17.41, 20)); // rend 1ct en moins
 
     </script>
 </body>
