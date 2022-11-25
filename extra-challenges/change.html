@@ -11,18 +11,25 @@
 <body>
     <script>
         function computeChange(price, moneyHanded) {
+            //vérification du type des variables "price" & "moneyHanded".
+            // Si !number, on retourne un array vide.
             if (typeof price !== 'number' || typeof moneyHanded !== 'number' || price < 0 || moneyHanded < 0)
                 return [];
+                // Si monneyHanded < price, on retourne un array un vide
             if (moneyHanded < price)
                 return [];
+                // On détermine la monnaie à rendre
             let change = moneyHanded - price;
+            // On remplit un array avec les différents billets & pièces en €
             let coins = [500, 200, 100, 50, 20, 10, 5, 2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01];
+            // Initialisation de l'array de résultat
             let result = [];
+            // On parcoure l'array coins
             for (let coin of coins) {
                 if (change >= coin) {
                     result.push(coin);
                     change -= coin;
-                    change = Math.floor(change * 100) / 100;
+                    change = (change * 100 / 100); // calcul de la monnaie à rendre sur chaque tranche
                 }
                 if (change === 0)
                     break;
@@ -30,12 +37,9 @@
             return result;
         }
 
-
-
         console.log(computeChange(12.3, 50));
-        console.log(computeChange(17.41, 20));
-        let test = computeChange(17.41, 20);
-        console.log(test);
+        console.log(computeChange(17.41, 20)); // rend 1ct en moins
+        
     </script>
 </body>
 
