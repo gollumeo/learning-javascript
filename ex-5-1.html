@@ -1,33 +1,40 @@
 <!DOCTYPE html> ,
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>test js</title>
-  </head>
 
-  <body>
-    <script>
-        let serieName = prompt("What's your favorite serie?");
-        let productionYear = prompt("What's its production year?");
-        let castMembers = prompt("Who are the actors?");
-        let cast = [];
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>test js</title>
+</head>
+
+<body>
+  <script>
+    let serieName = prompt("What's your favorite serie?");
+    let productionYear = prompt("What's its production year?");
+    let n = prompt("How many actors?");
+    let cast = [];
+    let castMembers = null;
+
+    for (i = 1; i <= n; i++) {
+      let castMembers = prompt("Who are them?");
+      cast.push(castMembers);
+    }
+
+    function askTvSerie(name, year, number, casters) {
+      let serieData = {
+        "name": serieName,
+        "year": productionYear,
+        "casters": cast.join(', ')
+      };
 
 
-         function askTvSerie(name, year, casters) {
-            let serieData = {
-                "name": serieName,
-                "year": productionYear,
-                "casters": castMembers
-            };
+    }
 
-            console.log(serieData);
-         }
+    askTvSerie(serieName, productionYear, n, castMembers);
+    console.log(serieData);
 
-         askTvSerie(serieName, productionYear, castMembers);
+  </script>
+</body>
 
-
-    </script>
-  </body>
 </html>

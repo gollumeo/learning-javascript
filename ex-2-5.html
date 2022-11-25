@@ -12,8 +12,11 @@
     <script>
 
         let i = prompt("What's your favorite number?");
-        if (i !== 42) {
+        while (i !== 42) {
             let i = prompt("Are you sure?");
+            if (i == 42) {
+                break;
+            }
         }
     </script>
 </body>
