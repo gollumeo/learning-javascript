@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test js</title>
+</head>
+
+<body>
+    <script>
+        class Circle {
+            constructor(xPos, yPos, radius) {
+                this.xPos = xPos;
+                this.yPos = yPos;
+                this.radius = radius;
+            }
+            move(xOffset, yOffset) {
+                this.xPos = this.xPos + xOffset;
+                this.yPos = this.yPos + yOffset;
+            }
+
+            get surface() {
+                return (Math.PI * this.radius ** 2);
+            }
+        }
+
+
+        
+        let myCircle = new Circle(50, 60, 10);
+        console.log(myCircle.surface.toFixed(2));
+    </script>
+</body>
+
+</html>
