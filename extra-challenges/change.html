@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra Challenges</title>
+</head>
+
+<body>
+    <script>
+        function computeChange(price, moneyHanded) {
+            if (typeof price !== 'number' || typeof moneyHanded !== 'number' || price < 0 || moneyHanded < 0)
+                return [];
+            if (moneyHanded < price)
+                return [];
+            let change = moneyHanded - price;
+            let coins = [500, 200, 100, 50, 20, 10, 5, 2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01];
+            let result = [];
+            for (let coin of coins) {
+                if (change >= coin) {
+                    result.push(coin);
+                    change -= coin;
+                    change = Math.floor(change * 100) / 100;
+                }
+                if (change === 0)
+                    break;
+            }
+            return result;
+        }
+
+
+
+        console.log(computeChange(12.3, 50));
+        console.log(computeChange(17.41, 20));
+        let test = computeChange(17.41, 20);
+        console.log(test);
+    </script>
+</body>
+
+</html>
